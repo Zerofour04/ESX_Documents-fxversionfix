@@ -1,16 +1,62 @@
 <div align="center">
 
-# ESX Documents
+# 📄ESX Documents
 
 <img src="https://i.ibb.co/HtCtSgx/esx-documents.png" width="100%">
 
-[![npm version](https://img.shields.io/github/release/apoiat/ESX_Documents.svg?style=flat)](https://github.com/apoiat/ESX_Deliveries "View this project on npm")  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-____
+
+## Document script for FiveM
+👑 Creator: [Apoiat](https://github.com/apoiat)
+🛠️ Forked by: [Zerofour](https://github.com/Zerofour04)
+
 
 </div>
 
 
-## Introduction
+## Features
+The following document functions are available
+* Create
+* Sign
+* Show
+* Give Copy
+* Delete
+* Public documents
+* Job specific documents
+* Custom documents creation
+* Localization (gr/en/br/de)
+
+## Requirements
+* ESX framework
+
+## ⚠️Warning: DON'T RENAME IT! Leave it `esx_documents`
+
+## 📋Download & Installation
+> <b>Important note:</b>
+Make sure your resource folder name is esx_documents. Anything else will make the script malfunction.
+
+### Using Git
+```
+cd resources
+git clone https://github.com/apoiat/ESX_Documents [esx]/esx_documents
+```
+
+### Manually
+Download https://github.com/apoiat/ESX_Documents/archive/master.zip
+
+Rename folder to esx_documents
+
+Put it in the `[esx]` directory
+
+## Installation
+1. Put it in the /resource
+2. Import the SQL 
+3. Add this in your server.cfg :
+
+```
+start esx_documents
+```
+
+## 📚Introduction
 Introducing Documents, a great roleplaying addition script for fivem servers using the esx framework. <b>This script provides creation, signing, copying and displaying of documents to enrich players' roleplaying experience</b>. Basically you have two type of documents:
 * Public documents
 
@@ -35,51 +81,10 @@ Introducing Documents, a great roleplaying addition script for fivem servers usi
 
   These are documents available only to assigned jobs and consist of documents that need to be filled and signed by people working that specific job. Examples are licenses, reports, permits
 
-## Features
-The following document functions are available
-* Create
-* Sign
-* Show
-* Give Copy
-* Delete
-* Public documents
-* Job specific documents
-* Custom documents creation
-* Localization (gr/en/br/de)
-
-## Requirements
-* ESX framework
-
-## Download & Installation
-> <b>Important note:</b>
-Make sure your resource folder name is esx_documents. Anything else will make the script malfunction.
-
-### Using Git
-```
-cd resources
-git clone https://github.com/apoiat/ESX_Documents [esx]/esx_documents
-```
-
-### Manually
-Download https://github.com/apoiat/ESX_Documents/archive/master.zip
-
-Rename folder to esx_documents
-
-Put it in the `[esx]` directory
-
-## Installation
-Import `esx_documents.sql` in your database
-
-Add this in your server.cfg :
-
-```
-start esx_documents
-```
-
-## How to use
+## 🖼️How to use
 Unless specified otherwise (in the config file) the hotkey assigned for the documents menu is "L". Releasing it will open up the main menu. From there you can chose to access publicly available documents, job-specific documents or your saved documents. The menu is pretty straightforward. This script comes with some common premade forms for you but if you want to create your own check out the following section.
 
-## How to create your own document.
+## 🖼️How to create your own document.
 Each document is assigned to a specific category. This category can be <b>public</b> for everyone or a <b>job name</b> to be accessible only by citizens in that specific job.
 Each document consists of a <b>headerTitle</b>, <b>headerSubtitle</b> and <b>elements</b>.
 headerTitle and headerSubtitle are self explanatory.
@@ -100,15 +105,36 @@ So let's see an example. Let's say we want to create a witness testimony documen
 -- Click the image on the left to see the code translation
 ["public] ={
         {
-          headerTitle = "WITNESS TESTIMONY",
-          headerSubtitle = "Official witness testimony.",
+          headerTitle = "Title",
+          headerSubtitle = "Subtitle.",
           elements = {
             { label = "DATE", type = "input", value = "", can_be_emtpy = false },
             { label = "TESTIMONY", type = "textarea", value = "", can_be_emtpy = false },
           }
         },
-        ....
+        ....Continue
 }
+```
+  ```
+-- Examble for documents for a job
+      ["cardealer"] = {
+        {
+          headerTitle = "Bill",
+          headerSubtitle = "Document for a car",
+          elements = {
+            { label = "Name", type = "input", value = "", can_be_emtpy = false },
+            { label = "Plate", type = "input", value = "Fuer wen?", can_be_emtpy = false },
+          }
+        },
+        {
+          headerTitle = "Bill",
+          headerSubtitle = "Document for something else",
+          elements = {
+            { label = "Name", type = "input", value = "David", can_be_emtpy = false },
+            { label = "Seller", type = "input", value = "Stinkt", can_be_emtpy = false },
+            { label = "Information", type = "textarea", value = "Zusatzinformation", can_be_emtpy = false },
+          }         } --I recommend to let this bracket
+      },
 ```
  </td>
 </tr>
