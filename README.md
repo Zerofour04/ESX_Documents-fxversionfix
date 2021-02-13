@@ -8,12 +8,14 @@
 ## Document script for FiveM
 👑 Creator: [Apoiat](https://github.com/apoiat)
 🛠️ Forked by: [Zerofour](https://github.com/Zerofour04)
+[![npm version](https://img.shields.io/github/release/apoiat/ESX_Documents.svg?style=flat)](https://github.com/apoiat/ESX_Deliveries "View this project on npm")  
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 
 </div>
 
 
-## Features
+## 📎Features
 The following document functions are available
 * Create
 * Sign
@@ -25,14 +27,12 @@ The following document functions are available
 * Custom documents creation
 * Localization (gr/en/br/de)
 
-## Requirements
+## 🧱Requirements
 * ESX framework
 
 ## ⚠️Warning: DON'T RENAME IT! Leave it `esx_documents`
 
 ## 📋Download & Installation
-> <b>Important note:</b>
-Make sure your resource folder name is esx_documents. Anything else will make the script malfunction.
 
 ### Using Git
 ```
@@ -48,7 +48,7 @@ Rename folder to esx_documents
 Put it in the `[esx]` directory
 
 ## Installation
-1. Put it in the /resource
+1. Put it in the `/resources` -folder
 2. Import the SQL 
 3. Add this in your server.cfg :
 
