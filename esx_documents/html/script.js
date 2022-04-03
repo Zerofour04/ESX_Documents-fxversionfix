@@ -102,7 +102,7 @@ function Form (_title, _subtitle, _elements, _submittable)
 		var json_string = JSON.stringify(activeform);
 		
 		if (can_submit) {
-			$.post('http://esx_documents/form_submit', json_string);
+			$.post('https://esx_documents/form_submit', json_string);
 			activeform.close();
 		}
 		
@@ -198,7 +198,7 @@ function Form (_title, _subtitle, _elements, _submittable)
 	this.close = function() {
 		$("#main_container").html("");
 		$("#main_container").css({display: 'none'});
-		$.post('http://esx_documents/form_close', JSON.stringify({}));
+		$.post('https://esx_documents/form_close', JSON.stringify({}));
 	}
 }
 
