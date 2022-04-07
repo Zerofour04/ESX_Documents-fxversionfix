@@ -23,8 +23,9 @@ files {
 	'html/jquery-3.4.1.min.js',
 }
 
+shared_script 'config.lua'
+
 server_scripts {
-	'config.lua',
 	'@mysql-async/lib/MySQL.lua',
 	'@es_extended/locale.lua',
 	'locales/gr.lua',
@@ -32,11 +33,10 @@ server_scripts {
 	'locales/br.lua',
 	'locales/de.lua',
 	'locales/fr.lua',
-	'server.lua',
+	'server.lua'
 }
 
 client_scripts {
-	'config.lua',
 	'@es_extended/locale.lua',
 	'locales/gr.lua',
 	'locales/en.lua',
@@ -44,5 +44,5 @@ client_scripts {
 	'locales/de.lua',
 	'locales/fr.lua',
 	'GUI.lua',
-	'client.lua',
+	'client.lua'
 }
